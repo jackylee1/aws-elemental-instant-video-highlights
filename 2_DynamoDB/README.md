@@ -1,4 +1,4 @@
-# Module 2: Amazon DynamoDB and AWS Lambda
+# Module 2: Amazon DynamoDB
 
 In this module, you'll set up the Amazon DynamoDB tables for the backend Lambda Functions that will indexing your live stream. You will also set up the IAM Roles that give the Lambda
 
