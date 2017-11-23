@@ -135,4 +135,4 @@ After completing these steps, you should be able to access your static website b
 
 Visit your website's base URL (this is the URL you noted in section 4) in the browser of your choice. You should see the page displayed. If you need to look up the base URL, visit the Amazon S3 console, select your bucket, and then click the **Static Web Hosting** card on the **Properties** tab.
 
-If the page renders correctly, you can move on to the next module, [Module 2: DynamoDB and Lambda](../2_DynamoDBandLambda/README.md).
+If the page renders correctly, you can move on to the next module, [Module 2: DynamoDB and Lambda](../2_DynamoDB/README.md).
