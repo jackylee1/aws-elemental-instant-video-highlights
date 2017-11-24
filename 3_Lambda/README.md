@@ -345,3 +345,7 @@ Since this Lambda is being invoked from the `catfinder5000-parse`, bring up the 
 ## Extra Credit
 
 If you finished this like way too fast... Then we have something extra for you to do that isn't required to make the Lab run, but is neat to learn. Continue on to Module X: [Extra Credit](../X_ExtraCredit/README.md) if you have extra time to spare and only work on the Module section you have completed so far.
+
+## Finished! - Time to cleaup this mess
+
+Now that you have completed the whole lab, it is time to clean up all the things we created in these modules. Please use the checklist here in Module Z: [Clean Up](../Z_CleanUp/README.md)

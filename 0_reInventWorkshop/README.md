@@ -31,3 +31,9 @@ This workshop is broken up into multiple modules. You must complete each module 
 ### re:Invent Workshop
 
 Onward to Module 1: [S3 Static Web hosting](../1_StaticWebHosting/README.md)
+
+## After the Workshop
+
+### Time to cleaup this mess
+
+Now that you have completed the whole lab, it is time to clean up all the things we created in these modules. Please use the checklist here in Module Z: [Clean Up](../Z_CleanUp/README.md)
