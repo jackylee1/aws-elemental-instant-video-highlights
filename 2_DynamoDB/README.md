@@ -1,6 +1,6 @@
 # Module 2: Amazon DynamoDB
 
-In this module, you'll set up the Amazon DynamoDB tables for the backend Lambda Functions that will indexing your live stream. You will also set up the IAM Roles that give the Lambda
+In this module, you'll set up the Amazon DynamoDB tables for the backend Lambda Functions that will indexing your live stream.
 
 ## Browser
 
@@ -128,3 +128,7 @@ Use the DynamoDB console to create a new DynamoDB table. Call your table `catfin
 ## Next Module
 
 After you have successfully created your DynamoDB tables, you can move on to the next module, [Module 3: Lambda](../3_Lambda/README.md) where we add Lambda Funcations for the backend processes.
+
+## Extra Credit
+
+If you finished this like way too fast... Then we have something extra for you to do that isn't required to make the Lab run, but is neat to learn. Continue on to Module X: [Extra Credit](../X_ExtraCredit/README.md) if you have extra time to spare and only work on the Module section you have completed so far.

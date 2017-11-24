@@ -260,9 +260,9 @@ To "tail" the logs, follow these steps.
 
 From here, you can press the Refresh button or keep scrolling down to see the latest logs from the Lambda.
 
-## 1. Create a Lambda Function - Prekog
+## 2. Create a Lambda Function - Prekog
 
-### Background
+### Background - Prekog
 
 AWS Lambda will run your code in response to events such as CloudWatch Event or an invocation from another Lambda. In this step, you'll build the core function using the data collected from the previous `catfinder5000-parse` Lambda to get frame accurate parameters of when a cat was detected in AWS Rekognition.
 
@@ -341,3 +341,7 @@ Since this Lambda is being invoked from the `catfinder5000-parse`, bring up the 
 1. Watch the website to see the process working as it updates dynamically every 10 seconds
 
 1. Click the thumbnails of the videos on the far right column to invoke a HTML5 player to view the Live-to-VOD asset from AWS Elemental Delta.
+
+## Extra Credit
+
+If you finished this like way too fast... Then we have something extra for you to do that isn't required to make the Lab run, but is neat to learn. Continue on to Module X: [Extra Credit](../X_ExtraCredit/README.md) if you have extra time to spare and only work on the Module section you have completed so far.

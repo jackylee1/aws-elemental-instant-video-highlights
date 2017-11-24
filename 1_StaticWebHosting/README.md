@@ -135,4 +135,10 @@ After completing these steps, you should be able to access your static website b
 
 Visit your website's base URL (this is the URL you noted in section 4) in the browser of your choice. You should see the page displayed. If you need to look up the base URL, visit the Amazon S3 console, select your bucket, and then click the **Static Web Hosting** card on the **Properties** tab.
 
+## Next Module
+
 If the page renders correctly, you can move on to the next module, [Module 2: DynamoDB](../2_DynamoDB/README.md).
+
+## Extra Credit
+
+If you finished this like way too fast... Then we have something extra for you to do that isn't required to make the Lab run, but is neat to learn. Continue on to Module X: [Extra Credit](../X_ExtraCredit/README.md) if you have extra time to spare and only work on the Module section you have completed so far.
