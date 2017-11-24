@@ -12,29 +12,29 @@ Reduce time to post (social media era: first post wins all!)
 
 ## Overall solution workflow
 
-![](0_reInventWorkshop/catfinder5000-workflow.png)
+![](images/catfinder5000-workflow.png)
 
 ## Demo of the service: what it can do
 
 ### Website Preview
 
-![](0_reInventWorkshop/catfinder5000-preview.png)
+![](images/catfinder5000-preview.png)
 
 ### Gotta Catch them All
 
 What do people like to watch on the internet?
 
-![](0_reInventWorkshop/catfinder5000-cat.png)
+![](images/catfinder5000-cat.png)
 
 In this lab, you will be creating the "Catfinder-5000"! Which was a name I chose to ensure no one has made any S3 bucket names that could conflict. The name "catfinder-5000" also clearly states that it finds cats. ( an the 5000 just makes it more fun to say ) The code currently only matches the Rekognition label "Cat", but can be overridden to any label of your choosing.
 
 ## AWS Services used under the hood
 
-![](0_reInventWorkshop/catfinder5000-overall.png)
+![](images/catfinder5000-overall.png)
 
 ## re:Invent Workshop
 
-Start here: [re:Invent Workshop Start](0_reInventWorkshop/README.md )
+Start here: Module 0 [re:Invent Workshop Start](0_reInventWorkshop/README.md )
 
 ## Module Listing
 
@@ -42,9 +42,9 @@ Module 0: [re:Invent Workshop Start](0_reInventWorkshop/README.md )
 
 Module 1: [S3 Static Web hosting](1_StaticWebHosting/README.md)
 
-Module 2: [DynamoDB and Lambda](2_DynamoDBandLambda/README.md)
+Module 2: [DynamoDB and Lambda](2_DynamoDB/README.md)
 
-Module 3: [Lambda and Delta](3_Prekog/README.md)
+Module 3: [Lambda and Delta](3_Lambda/README.md)
 
 Module X: [Extra Credit](X_ExtraCredit/README.md) 
 ( Not required, but you will learn more things! )
