@@ -25,7 +25,7 @@ Use the DynamoDB console to create a new DynamoDB table. Call your table `catfin
 1. For **Table name**, enter `catfinder5000-main`. This field is case-sensitive.
 
 1. For **Partition key**, enter `id_filename`, and then select **String** for the key type. This field is case-sensitive.
-1. Under "Table Settings", clear **Use default settings**.
+1. Under "Table Settings", clear **Use default settings**. ( uncheck the box )
 
 1. Under "Secondary indexes", click **+ Add Index**.
 
@@ -39,13 +39,17 @@ Use the DynamoDB console to create a new DynamoDB table. Call your table `catfin
 
 1. For **Index Name**, confirm that `id_type-id_filename-index` appears.
 
-1. For **Projected attributes**, select `All`.
+1. For **Projected attributes**, select `All`. 
 
 1. Click **Add Index**.
 
 1. In the **Provisioned capacity** and **Auto Scaling** sections, leave the default configurations. 
 
 1. Click **Create**.
+
+### Result - Main Table
+
+![](../images/catfinder5000-dynamomain.png)
 
 ## 2. Create a DynamoDB Table - "Summary"
 
@@ -65,7 +69,7 @@ Use the DynamoDB console to create a new DynamoDB table. Call your table `catfin
 
 1. For **Partition Key**, enter `rekog_label` and then select **String** for the key type. This field is case-sensitive.
 
-1. Under "Table Settings", clear  **Use default settings**.
+1. Under "Table Settings", clear  **Use default settings**. ( uncheck the box )
 
 1. Under "Secondary indexes", Click  **"+ Add Index"**. The Add index dialog box displays.
 
@@ -74,6 +78,8 @@ Use the DynamoDB console to create a new DynamoDB table. Call your table `catfin
 1. Select **Add Sort Key**.
 
 1. For **Sort Key**, enter `timestamp_updated` and then select **Number** for the key type. 
+
+    *Note:* the key type is "Number"
 
 1. For **Index name**, confirm that `rekog_type-timestamp_updated-index` appears.
 
@@ -84,6 +90,10 @@ Use the DynamoDB console to create a new DynamoDB table. Call your table `catfin
 1. Under **Provisioned capacity** and **Auto Scaling** sections, leave the default configurations. 
 
 1. Click **Create**.
+
+### Result - Summary Table
+
+![](../images/catfinder5000-dynamosummary.png)
 
 ## 3. Create a DynamoDB Table - "List"
 
@@ -110,6 +120,10 @@ Use the DynamoDB console to create a new DynamoDB table. Call your table `catfin
 1. Under "Table Settings", leave **Use default settings** selected.
 
 1. Click **Create**.
+
+### Result - List Table
+
+![](../images/catfinder5000-dynamolist.png)
 
 ## Next Module
 
