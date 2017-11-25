@@ -1,0 +1,407 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        pre {
+            background: #000 !important;
+            color: #fff !important;
+        }
+        
+        .row-striped {
+            margin-bottom: 30px;
+        }
+        
+        #ex1Slider .slider-selection {
+            background: #BABABA;
+        }
+        
+        .duration-40,
+        .duration-50,
+        .duration-60,
+        .duration-70,
+        .duration-80,
+        .duration-90,
+        .duration-over {
+            display: none;
+        }
+        
+        .light {
+            font-size: 20%;
+        }
+    </style>
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Videojs player -->
+    <link href="http://vjs.zencdn.net/5.11.8/video-js.css" rel="stylesheet">
+    <!-- If you'd like to support IE8 -->
+    <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <!-- HLS Player through the CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/5.10.2/alt/video-js-cdn.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/5.10.2/video.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/3.0.2/videojs-contrib-hls.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/bootstrap-slider.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/css/bootstrap-slider.css" />
+
+    <script type="text/javascript">
+        var s3_url = '/'
+
+        console.log("ready!");
+        // lets see if url params are set
+        var all_the_stuff = {};
+        update_list('first');
+        list_timer = setInterval(update_list, 10000);
+
+
+
+
+
+        function update_list(which_time = 'notfirstime') {
+            $.getJSON(s3_url + "list-label.json", function(json) {
+                $("#please_wait").remove();
+                $("#rekog_list-label").html('');
+                $("#rekog_list-label").append('<h3>Labels</h3>');
+                $("#label-header").hide();
+
+                $.each(json, function() {
+                    // console.log(this)
+                    if (typeof this.id_filename != "undefined") {
+                        this_thumbnail = this.id_filename;
+                    } else {
+                        this_thumbnail = 'static.jpg'
+                    }
+                    // $("#rekog_list").append('<div class="col"><a href="index.html?label=' + this.rekog_label + '">' + this.rekog_label + '</a></div>');
+                    $("#rekog_list-label").append('<div class="col"><a href="index.html?label=' + this.rekog_label + '"><div class="delta-frame" style="width: 175px" ><div class="thumbnail"><div class="img-wrapper"><img src="' + s3_url + this_thumbnail + '"  ></div><div class="caption text-center">' + this.rekog_label + '</div></div></div></a></div>');
+
+
+                });;
+            });
+            $.getJSON(s3_url + "list-celeb.json", function(json) {
+                $("#please_wait").remove();
+                $("#rekog_list-celeb").html('');
+                $("#rekog_list-celeb").append('<h3>Celeb</h3>');
+                $("#label-header").hide();
+
+                $.each(json, function() {
+                    // console.log(this)
+                    if (typeof this.id_filename != "undefined") {
+                        this_thumbnail = this.id_filename;
+                    } else {
+                        this_thumbnail = 'static.jpg'
+                    }
+                    // $("#rekog_list").append('<div class="col"><a href="index.html?label=' + this.rekog_label + '">' + this.rekog_label + '</a></div>');
+                    $("#rekog_list-celeb").append('<div class="col"><a href="index.html?label=' + this.rekog_label + '"><div class="delta-frame" style="width: 175px" ><div class="thumbnail"><div class="img-wrapper"><img src="' + s3_url + this_thumbnail + '"  ></div><div class="caption text-center">' + this.rekog_label + '</div></div></div></a></div>');
+
+                });;
+            });
+            $.getJSON(s3_url + "list-vod.json", function(json) {
+                $.each(json, function() {
+                    if ($("#playerdiv_" + this.entry_id).length > 0) {} else {
+                        $.each(this.delta_filters, function(filter_id, filter) {
+                            if (filter.type == "live_to_vod") {
+                                start_time = filter.start_time;
+                                start_frame = pad(filter.start_frame);
+                                start_string = start_time.replace('Z', ':' + start_frame).replace('T', ' ');
+                                live2vod_id = filter_id;
+                            }
+                            if (filter.type == "mp4_package") {
+                                mp4_endpoint = filter.endpoint
+                            }
+
+                        });
+                        $("#rekog_list-vids").append('<div id="row_' + this.entry_id + '" class="row row-striped" style=""  ></div>');
+                        // $("#row_" + this.entry_id).append('<div id="chooser_' + this.entry_id + '" class="col-md-1" style="" ><p>Chosen Frames</p></div>')
+                        // $("#chooser_" + this.entry_id).append('<div class="row"><div class="col-sm-12" ><div class="delta-frame" ><div class="thumbnail"><div class="img-wrapper"><img src="' + this.time_start_image + '"  ></div><div class="caption text-center">Start Frame</div></div></div></div></div>');
+                        // $("#chooser_" + this.entry_id).append('<div class="row"><div class="col-sm-12" ><div class="delta-frame" ><div class="thumbnail"><div class="img-wrapper"><img src="' + this.time_end_image + '"  ></div><div class="caption text-center">End Frame</div></div></div></div></div>');
+                        if (which_time == 'first') {
+
+                        } else {
+                            $("#rekog_list-vids").prepend('<div id="row_' + this.entry_id + '" class="row row-striped" style=""  ></div>');
+
+                        }
+                        $("#row_" + this.entry_id).append('<div id="playerdiv_' + this.entry_id + '" class="col-md-4" style="width: 360px;"  ><div class="row" style=""><a href="index.html?label=' + this.label + '"><div class="col-md-6 col-md-offset-3 time" style="font-size: 120%; margin-top: 10px" id="playerdivtime_' + this.entry_id + '">' + this.label + '</div></a></div><div class="row" ><div class="col-md-12 video" onclick="startPlayer(\'' + mp4_endpoint + '\', \'' + this.entry_id + '\')"><span id="thumbnailspan_' + this.entry_id + '"></span><img  id="thumbnail_' + this.entry_id + '" style=" width: 100%;" class=" img-responsive img-rounded" src="' + s3_url + this.label_image + '" ></div></div></div>');
+
+                        $("#row_" + this.entry_id).append('<div id="delta_' + this.entry_id + '" class="col-md-6" style=""  ><p>Delta Filter Info</p><pre class="samplecode even">' + JSON.stringify(this.delta_filters, null, 4) + '</pre></div>');
+
+                    }
+                });
+            });
+
+        }
+
+        function slider_moved(direction) {
+            draw_the_list($("#slider-duration-" + direction).val(), $("#slider-scenedetect-" + direction).val(), direction)
+            $("#slider-duration-value-" + direction).html(Math.abs($("#slider-duration-" + direction).val()));
+            $("#slider-scenedetect-value-" + direction).html($("#slider-scenedetect-" + direction).val());
+        }
+
+        function move_slider(duration, scenedetect, direction) {
+            $("#slider-duration-" + direction).val(duration);
+            $("#slider-scenedetect-" + direction).val(scenedetect);
+            slider_moved(direction);
+        }
+
+        function draw_the_list(duration, scenedetect, attempt) {
+            this_label = getUrlParameter('label');
+            // console.log('duration: ' + duration + ' scenedetect:' + scenedetect);
+            $("#label-header").show();
+
+            $.each(all_the_stuff, function() {
+                // console.log(this)
+                this_rowname = this.timestamp_updated;
+
+                if (attempt == 'first') {
+                    $("#label").replaceWith('<h3><a href="index.html">' + this.rekog_label + '</a></h3>');
+
+                    $("#list").append('<div class="row row-striped" ><div class="col-md-5" id="rowbackward-' + this_rowname + '"  ></div><div class="col-md-2 bg-primary"  ><div class="delta-frame" ><div class="thumbnail"><div class="img-wrapper"><img src="' + this.id_filename + '"  ></div><div class="caption text-center small">' + this.timestamp_minute + ':' + this.timestamp_second + ';' + this.timestamp_frame + '</div></div></div><div id="starttime-' + this_rowname + '"></div><div id="endtime-' + this_rowname + '"></div></div><div class="col-md-5" id="rowforward-' + this_rowname + '"  ></div></div>');
+                } else if (attempt == 'forward') {
+                    $("#rowforward-" + this_rowname).replaceWith('<div class="col-md-5" id="rowforward-' + this_rowname + '"  ></div>');
+                    last_time = '';
+                    $.each(this.hops_forward, function() {
+                        // console.log(this);
+                        if (parseInt(this.time_since) <= duration && parseInt(this.scenedetect) >= scenedetect) {
+                            // if (parseInt(this.time_since) <= duration) {
+                            t = 'light';
+                            if (parseInt(this.scenedetect) >= scenedetect) {
+                                t = 'dark';
+                            }
+                            rekog_repeat = '';
+                            rekog_repeat_style = '';
+                            if (this.rekog_label == this_label) {
+                                // rekog_repeat = this.rekog_label;
+                                rekog_repeat_style = ''
+                            } else {
+                                // rekog_repeat_style = 'small'
+                            }
+                            $("#rowforward-" + this_rowname).append('<div onclick="move_slider(\'' + this.time_since + '\', \'' + this.scenedetect + '\', \'forward\')" class="delta-frame " style="width: 90px" ><div class="thumbnail ' + t + '" ><div class="img-wrapper"><img src="' + this.id_filename + '"  ></div><div class="caption text-center small' + rekog_repeat_style + '">' + Math.abs(this.time_since) + 's ' + this.scenedetect + '% ' + rekog_repeat + '</div></div></div>');
+                            // if (last_time == '') {
+                            last_time = '<div class="delta-frame" style="width: 135px" ><div class="thumbnail " ><div class="img-wrapper"><img src="' + this.id_filename + '"  ></div><div class="caption text-center ' + rekog_repeat_style + '">End</div></div></div>';
+                            // last_time_form = '<div class="row"><div class="col-sm-4"><input type="text" class="form-control" placeholder="time end" id="time_end" readonly="" value="' + this.timestamp_human + '"></div></div>';
+                            // }
+                        }
+
+                    });;
+                    $("#endtime-" + this_rowname).html(last_time);
+                    // $("#endtimeform-" + this_rowname).html(last_time_form);
+
+                } else if (attempt == 'backward') {
+                    $("#rowbackward-" + this_rowname).replaceWith('<div class="col-md-5" id="rowbackward-' + this_rowname + '"  ></div>');
+                    last_time = '';
+                    $.each(this.hops_backward, function() {
+                        // console.log(this.time_since);
+                        if (parseInt(this.time_since) >= duration && parseInt(this.scenedetect) >= scenedetect) {
+                            // if (parseInt(this.time_since) >= duration) {
+                            t = 'light';
+                            if (parseInt(this.scenedetect) >= scenedetect) {
+                                t = 'dark';
+                            }
+                            rekog_repeat = '';
+                            rekog_repeat_style = '';
+                            if (this.rekog_label == this_label) {
+                                // rekog_repeat = this.rekog_label;
+                                rekog_repeat_style = ''
+                            } else {
+                                // rekog_repeat_style = 'small'
+                            }
+                            $("#rowbackward-" + this_rowname).append('<div onclick="move_slider(\'' + this.time_since + '\', \'' + this.scenedetect + '\', \'backward\')" class="delta-frame " style="width: 90px; float: right;" ><div class="thumbnail ' + t + '" ><div class="img-wrapper"><img src="' + this.id_filename + '"  ></div><div class="caption text-center small' + rekog_repeat_style + '">' + Math.abs(this.time_since) + 's ' + this.scenedetect + '% ' + rekog_repeat + '</div></div></div>');
+                            // if (last_time == '') {
+                            last_time = '<div class="delta-frame " style="width: 135px" ><div class="thumbnail " ><div class="img-wrapper"><img src="' + this.id_filename + '"  ></div><div class="caption text-center ' + rekog_repeat_style + '">Start</div></div></div>';
+                            // last_time_form = '<div class="row"><div class="col-sm-4"><input type="text" class="form-control" placeholder="time start" id="time_start" readonly="" value="' + this.timestamp_human + '"></div></div>';
+
+                            // }
+                        }
+
+                    });;
+                    $("#starttime-" + this_rowname).html(last_time);
+                    // $("#startimeform-" + this_rowname).html(last_time_form);
+
+                } else {
+                    // dunno
+                }
+
+
+                // console.log(last_time);
+
+            });;
+
+        }
+
+
+        function pad(value) {
+            if (value < 10) {
+                return '0' + value;
+            } else {
+                return value;
+            }
+        }
+
+        function getUrlParameter(sParam) {
+            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : sParameterName[1];
+                }
+            }
+        };
+        var currentPlayer = 0;
+
+        function startPlayer(url, id) {
+            console.log(id + url);
+
+
+            if (currentPlayer != "0") {
+                destroyPlayer();
+            }
+            /// TOODO : add html to load the player
+            // temp_html = '<div id="details_' + id + '"  ><video id="player_' + id + '" style="width: 576px; height: 324px" class="video-js center-block" > <source src="' + url + '" type="video/mp4">  </video></div>';
+            temp_html = '<div id="details_' + id + '"  ><video id="player_' + id + '" style="width: 320; height: 180px; margin: 0 0 0 0 ;" class="video-js center-block" > <source src="' + url + '" type="video/mp4">  </video></div>';
+            $("#playerdiv_" + id).append(temp_html);
+            $("#thumbnail_" + id).hide();
+            $("#thumbnailspan_" + id).hide();
+            // $("#div_" + id).addClass("bg-primary");
+            // $("#div_"+id).removeClass('col-md-1');
+            // $("#div_"+id).addClass('col-md-12');
+            // $("#thumbnail_"+id).addClass('hidden');
+
+            // $("#div_"+id).append(temp_html);
+            videojs('player_' + id, {
+                "width": 640,
+                "height": 360,
+                "controls": true,
+                "autoplay": true,
+                "preload": "auto"
+            });
+            currentPlayer = id;
+        }
+
+        function destroyPlayer() {
+            console.log('disposeing of: ' + currentPlayer);
+            // $('#thumbnail_' + currentPlayer).removeClass('hidden');
+            // $("#div_"+currentPlayer).addClass('col-md-1');
+            // $("#div_"+currentPlayer).removeClass('col-md-12');
+            // $("#thumbnail_"+currentPlayer).removeClass('hidden');
+            var player = window.player = videojs('player_' + currentPlayer);
+            player.dispose();
+            $("#details_" + currentPlayer).remove();
+            $("#thumbnail_" + currentPlayer).show();
+            $("#thumbnailspan_" + currentPlayer).show();
+            // $("#div_" + currentPlayer).removeClass("bg-primary");
+
+            // videojs(document.getElementById('player_'+id), {}, function() {                });
+
+        }
+
+        function livePlayer() {
+
+            /// TOODO : add html to load the player
+            videojs('player_live', {
+                "width": 640,
+                "height": 360,
+                "controls": true,
+                "autoplay": true,
+                "preload": "auto"
+            });
+
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+        <div class="row" id="top_header">
+            <div class="col-md-12 elem-header" style="padding: 18px 5px 18px 5px; ">
+                <a href="index.html" class="elemental-logo">Catfinder-5000</a>
+            </div>
+        </div>
+        <div class="row elem-footer" id="tab_primary">
+        </div>
+        <div class="row elem-footer hidden" id="tab_secondary">
+        </div>
+
+
+        <div id="please_wait">
+            <p><img style="width: 200px; height: 150px" src="https://i.imgur.com/i6eXrfS.gif" /><i>loading...</i></p>
+        </div>
+        <div class="row" id="sliders" style="display: none">
+            <div class="col-md-8 alert alert-info" style=" position:fixed;top:0px;right:0px; z-index: 2;     background: #000;     color: #fff;     border-color: #0d0d0d;">
+                <div class="row">
+                    <div class="col-md-4"><label>Backward Duration: <span id="slider-duration-value-backward">10</span></label><input id="slider-duration-backward" oninput="slider_moved('backward')" type="range" min="-60" max="0" value="-10" step="1" /></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4"><label>Forward Duration: <span id="slider-duration-value-forward">10</span></label><input id="slider-duration-forward" oninput="slider_moved('forward')" type="range" min="1" max="60" value="10" step="1" /></div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-3"><label>Backward Scene Detection Sensitivity: <span id="slider-scenedetect-value-backward">10</span></label><input id="slider-scenedetect-backward" oninput="slider_moved('backward')" type="range" min="10" max="90" value="10" step="1"
+                        /></div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3"><label>Forward Scene Detection Sensitivity: <span id="slider-scenedetect-value-forward">10</span></label><input id="slider-scenedetect-forward" oninput="slider_moved('forward')" type="range" min="10" max="90" value="10" step="1" /></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-1" id="button_location"></div>
+                    <script>
+                    </script>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="celeb"></div>
+        <div id="label-header" style="display: none">
+            <div class="row row-striped">
+                <div class="col-md-5">
+                    <h3>Before Moment of Interest</h3>
+                    <p>Use the sliders labeled "Backward Duration" and "Backward Scene Detection" to see a realtime preview so you can configure the automation that will find the start of the Live to VOD archive. </p>
+                </div>
+                <div class="col-md-2 ">
+                    <h3>Moment of Interest</h3>
+                    <p>The label detected by Rekognition and the anchor of why the automation will choose a time for the Live to VOD archive.</p>
+                </div>
+                <div class="col-md-5">
+                    <h3>After the Moment of Interest</h3>
+                    <p>Use the sliders labeled "Forward Duration" and "Forward Scene Detection" to see a realtime preview of those desired settings. Pressing the "Update" button will place these user defined parameters into the automation system. You can
+                        view the results in the landing page of this demo after the label has been detected and processed.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="label">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Rekognition by Labels</h2>
+                    <p>Labels indexed realtime from a HLS Livestream. Updates every 10 seconds. Click the label to define Duration parameters for Automated Live to VOD submissions. </p>
+                </div>
+                <div class="col-md-3">
+                    <h2>Rekognition by Celebrity</h2>
+                    <p>indexed only if "Person" label was detected. </p>
+
+                </div>
+                <div class="col-md-5">
+                    <h2>Delta Frame Accurate Live to VOD</h2>
+                    <p>Archive submitted from automation using Rekogntion, Scene Change Detection, and User defined durations per label aka the "Moment of Interest"</p>
+                </div>
+                <h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 bg-success" id="rekog_list-label"></div>
+                <div class="col-md-3 bg-info" id="rekog_list-celeb"></div>
+                <div class="col-md-5 " id="rekog_list-vids"></div>
+            </div>
+        </div>
+        <div id="list"> </div>
+
+
+    </div>

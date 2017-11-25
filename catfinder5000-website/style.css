@@ -1,0 +1,299 @@
+        @font-face {
+            font-family: "AvenirNextLTW01-Regular";
+            src: url(/sites/all/themes/Elemental_Clean/fonts/fontscom/e9167238-3b3f-4813-a04a-a384394eed42.eot?#iefix);
+            src: url(/sites/all/themes/Elemental_Clean/fonts/fontscom/e9167238-3b3f-4813-a04a-a384394eed42.eot?#iefix) format("eot"), url(/sites/all/themes/Elemental_Clean/fonts/fontscom/2cd55546-ec00-4af9-aeca-4a3cd186da53.woff2) format("woff2"), url(/sites/all/themes/Elemental_Clean/fonts/fontscom/1e9892c0-6927-4412-9874-1b82801ba47a.woff) format("woff"), url(/sites/all/themes/Elemental_Clean/fonts/fontscom/46cf1067-688d-4aab-b0f7-bd942af6efd8.ttf) format("truetype"), url(/sites/all/themes/Elemental_Clean/fonts/fontscom/52a192b1-bea5-4b48-879f-107f009b666f.svg#52a192b1-bea5-4b48-879f-107f009b666f) format("svg")
+        }
+        
+        @font-face {
+            font-family: "AvenirNextLTW01-Medium";
+            src: url(/sites/all/themes/Elemental_Clean/fonts/fontscom/1a7c9181-cd24-4943-a9d9-d033189524e0.eot?#iefix);
+            src: url(/sites/all/themes/Elemental_Clean/fonts/fontscom/1a7c9181-cd24-4943-a9d9-d033189524e0.eot?#iefix) format("eot"), url(/sites/all/themes/Elemental_Clean/fonts/fontscom/627fbb5a-3bae-4cd9-b617-2f923e29d55e.woff2) format("woff2"), url(/sites/all/themes/Elemental_Clean/fonts/fontscom/f26faddb-86cc-4477-a253-1e1287684336.woff) format("woff"), url(/sites/all/themes/Elemental_Clean/fonts/fontscom/63a74598-733c-4d0c-bd91-b01bffcd6e69.ttf) format("truetype"), url(/sites/all/themes/Elemental_Clean/fonts/fontscom/a89d6ad1-a04f-4a8f-b140-e55478dbea80.svg#a89d6ad1-a04f-4a8f-b140-e55478dbea80) format("svg")
+        }
+        
+        @font-face {
+            font-family: "Avenir Next LT W01 Demi";
+            src: url(/sites/all/themes/Elemental_Clean/fonts/fontscom/12d643f2-3899-49d5-a85b-ff430f5fad15.eot?#iefix);
+            src: url(/sites/all/themes/Elemental_Clean/fonts/fontscom/12d643f2-3899-49d5-a85b-ff430f5fad15.eot?#iefix) format("eot"), url(/sites/all/themes/Elemental_Clean/fonts/fontscom/aad99a1f-7917-4dd6-bbb5-b07cedbff64f.woff2) format("woff2"), url(/sites/all/themes/Elemental_Clean/fonts/fontscom/91b50bbb-9aa1-4d54-9159-ec6f19d14a7c.woff) format("woff"), url(/sites/all/themes/Elemental_Clean/fonts/fontscom/a0f4c2f9-8a42-4786-ad00-fce42b57b148.ttf) format("truetype"), url(/sites/all/themes/Elemental_Clean/fonts/fontscom/99affa9a-a5e9-4559-bd07-20cf0071852d.svg#99affa9a-a5e9-4559-bd07-20cf0071852d) format("svg")
+        }
+        
+        @font-face {
+            font-family: "Avenir Next LT W01 Bold";
+            src: url(/sites/all/themes/Elemental_Clean/fonts/fontscom/dccb10af-07a2-404c-bfc7-7750e2716bc1.eot?#iefix);
+            src: url(/sites/all/themes/Elemental_Clean/fonts/fontscom/dccb10af-07a2-404c-bfc7-7750e2716bc1.eot?#iefix) format("eot"), url(/sites/all/themes/Elemental_Clean/fonts/fontscom/14c73713-e4df-4dba-933b-057feeac8dd1.woff2) format("woff2"), url(/sites/all/themes/Elemental_Clean/fonts/fontscom/b8e906a1-f5e8-4bf1-8e80-82c646ca4d5f.woff) format("woff"), url(/sites/all/themes/Elemental_Clean/fonts/fontscom/890bd988-5306-43ff-bd4b-922bc5ebdeb4.ttf) format("truetype"), url(/sites/all/themes/Elemental_Clean/fonts/fontscom/ed104d8c-7f39-4e8b-90a9-4076be06b857.svg#ed104d8c-7f39-4e8b-90a9-4076be06b857) format("svg")
+        }
+        
+        html {
+            font-family: "AvenirNextLTW01-Regular", Helvetica, Arial, sans-serif;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%
+        }
+        
+        body {
+            font-size: 14px;
+            font-size: 0.875rem;
+            line-height: 1.714;
+            -webkit-font-smoothing: subpixel-antialiased
+        }
+        
+        a {
+            color: #b75633
+        }
+        
+        a:visited,
+        a:hover,
+        a:focus {
+            color: #fb6361
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-weight: normal;
+            line-height: 1
+        }
+        
+        h1 {
+            font-size: 50px;
+            font-size: 2.778rem;
+            font-family: "AvenirNextLTW01-Medium", Helvetica, Arial, sans-serif
+        }
+        
+        h2 {
+            font-size: 21px;
+            font-size: 1.3125rem;
+            font-family: "AvenirNextLTW01-Regular", Helvetica, Arial, sans-serif;
+            line-height: 1.2
+        }
+        
+        h3 {
+            color: #f90;
+            font-size: 26px;
+            font-size: 1.625rem;
+            font-family: "AvenirNextLTW01-Medium", Helvetica, Arial, sans-serif;
+            margin-bottom: 0.6em
+        }
+        
+        h4 {
+            color: #444;
+            font-size: 21px;
+            font-size: 1.3125rem;
+            font-family: "AvenirNextLTW01-Regular", Helvetica, Arial, sans-serif;
+            line-height: 1.2;
+            padding-bottom: 0.4em
+        }
+        
+        h4 a {
+            color: #444
+        }
+        
+        h4 a:visited {
+            color: #444
+        }
+        
+        h4 a:hover {
+            color: #f90
+        }
+        
+        h5 {
+            color: #f90;
+            font-size: 1.125rem;
+            font-size: 1.125rem
+        }
+        
+        b,
+        strong {
+            font-family: "Avenir Next LT W01 Demi", Helvetica, Arial, sans-serif
+        }
+        
+        body,
+        .elem-footer,
+        .elem-footer ul {
+            background-color: #262626;
+            padding: 0px 0px 0px 0px;
+        }
+        
+        .nav {
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+        }
+        
+        .nav a {
+            color: #e6e7e8;
+        }
+        
+        .elem-header {
+            background-color: #444;
+        }
+        
+        .elem-header {
+            width: 100%
+        }
+        
+        .full-width-header {
+            background: url(nnerpage_bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            -webkit-background-size: cover;
+            padding-top: 60px;
+            padding-top: 3.75rem;
+            padding-bottom: 60px;
+            padding-bottom: 3.75rem
+        }
+        
+         ::-webkit-scrollbar {
+            -webkit-appearance: none;
+            width: 7px;
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background-color: rgba(0, 0, 0, .5);
+            -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+        }
+        
+        .box_orange,
+        .box_orange input {
+            color: white;
+            background-color: orange;
+        }
+        
+        .box_black,
+        .box_black input {
+            color: white;
+            background-color: black;
+        }
+        
+        .box_green,
+        .box_green input {
+            color: white;
+            background-color: green;
+        }
+        
+        .inputs {
+            text-transform: capitalize;
+        }
+        /*.row-striped:nth-of-type(odd) {
+            background-color: #efefef;
+        }*/
+        
+        .row-striped:nth-of-type(even) {
+            background-color: #f8f8f8;
+        }
+        
+        .samplecode {
+            font-size: 75%;
+        }
+        
+        .time {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 160%;
+        }
+        
+        .glyphicon-refresh-animate {
+            -animation: spin .7s infinite linear;
+            -webkit-animation: spin2 .7s infinite linear;
+        }
+        
+        @-webkit-keyframes spin2 {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spin {
+            from {
+                transform: scale(1) rotate(0deg);
+            }
+            to {
+                transform: scale(1) rotate(360deg);
+            }
+        }
+        /*.row-striped:hover {
+            background-color: #dff0d8;
+        }*/
+        
+        .thumbnail img {
+            max-width: 100%;
+            /* do not stretch the bootstrap column */
+        }
+        
+        .thumbnail,
+        .thumbnail .caption {
+            background-color: #262626 !important;
+            color: #fff !important;
+            /* do not stretch the bootstrap column */
+        }
+        
+        .img-wrapper {
+            width: 100%;
+            padding-bottom: 65%;
+            /* your aspect ratio here! */
+            position: relative;
+        }
+        
+        .img-wrapper img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            min-height: 100%;
+            /* optional: if you want the smallest images to fill the .thumbnail */
+        }
+        
+        .delta-frame {
+            width: 275px;
+            max-width: 100%;
+            float: left;
+        }
+        
+        .emoji-picker-icon {
+            right: 25px;
+        }
+        
+        .videos img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .video {
+            float: left;
+            position: relative;
+        }
+        
+        .video span {
+            content: '';
+            background-image: url(web_icon_play.svg);
+            background-repeat: no-repeat;
+            height: 120px;
+            /* width: 120px; */
+            /* text-align: center; */
+            margin: auto;
+            /* background-position: 0 15px; */
+            /* background-color: #000; */
+            border-radius: 100%;
+            height: 120px;
+            width: 120px;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            left: 0;
+            right: 0;
+            content: '';
+            background-repeat: no-repeat;
+            height: 120px;
+            width: 120px;
+            text-align: center;
+            display: block;
+            margin: auto;
+            background-color: #000;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 100%;
+        }
