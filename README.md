@@ -59,3 +59,7 @@ Module 3: [Lambda](3_Lambda/README.md)
 Module X: [Extra Credit](X_ExtraCredit/README.md) ( Not required, but you will learn more things! )
 
 Module Z: [Clean Up](Z_CleanUp/README.md) ( Highly recommended to complete so you won't have unnecessary AWS charges )
+
+## License
+
+This library is licensed under the Apache 2.0 License.
