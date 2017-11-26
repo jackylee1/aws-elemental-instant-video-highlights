@@ -59,3 +59,21 @@ DynamoDB has the ability to automatically delete entries from the table. You hav
 1. Click **Continue**
 
 1. Repeat this process for `catfinder5000-list`
+
+## Module 3: Detect New Label in "parse" Lambda Function
+
+You can override the "Cat" variable in the "parse" Lambda Function with an Environment Variable. This will defeat the purpose of the "catfinder", but shows that we aren't just locked into it. Follow these steps.
+
+1. Confirm you are in Oregon ( us-west-2 ) Region
+
+1. On the **Services** menu, click **Lambda**.
+
+1. Choose the Function called `catfinder5000-parse
+
+1. On the "Configuration" tab, under "Environment variables" enter the following:
+
+    1. For **Key**, enter `HLS_URL` and then in **Value** put any Rekognition Label you want
+
+    *Note:* Labels start with a capital letter ex: "Cat", "Adorable"
+
+    *Note:* Refer to the "catfinger5000-summary" table for labels that have occured
