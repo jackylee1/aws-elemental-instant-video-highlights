@@ -195,6 +195,7 @@ def delta_frameaccurateput(url, content_id, query_dict):
   </filters>
 </content>'''
     # print(data)
+    print('start: {};{}\tend: {};{}'.format(query_dict['time_start'], query_dict['time_start_frame'], query_dict['time_end'], query_dict['time_end_frame']))
     callback_str = elemental_api(urlinput, "PUT", data)
     doc = ET.fromstring(callback_str)
     # print doc
@@ -271,16 +272,18 @@ def get_hops(rekog_label, id_filename, scan_index):
     )
     return response
 def detect_hops(rekog_label, id_filename, scan_index):
-    scenechange_threshold = 50
+    scenechange_threshold = 10
     prekog_continue = 1
     prekog_infinteloop = 0
     last_id_filename = id_filename
     last_hop = {}
+    loop_count = 0
     while prekog_continue > 0:
+        loop_count += 1
         prekog_continue = 0
         response = get_hops(rekog_label, last_id_filename, scan_index)
         if len(response['Items']) < 1:
-            print('WARNING: items has less than 1: {} we are too fast lets sleep'.format(len(response['Items'])))
+            print('LOOP: items has less than 1: {} we are too fast lets sleep'.format(len(response['Items'])))
             prekog_continue += 1
             time.sleep(4)
         else:
@@ -288,23 +291,28 @@ def detect_hops(rekog_label, id_filename, scan_index):
                 # pprint(this_item)
                 last_hop = this_item
                 if last_id_filename == this_item['id_filename']:
-                    print('WARNING: we got the same id_filename {} == {} BREAK!'.format(last_id_filename, this_item['id_filename']))
+                    print('END: we got the same id_filename {} == {} BREAK!'.format(last_id_filename, this_item['id_filename']))
                     break
                 else:
                      last_id_filename = this_item['id_filename']   
                 for this_label in this_item['rekog_labels']:
                     if this_label['Name'] == rekog_label:
-                        print('INFO: matched rekog_label: {} must go deeper \t{}:{};{}'.format(rekog_label, this_item['timestamp_minute'],this_item['timestamp_second'],this_item['timestamp_frame']))
+                        print('LOOP: matched rekog_label: {} must go deeper \t{}:{};{}'.format(rekog_label, this_item['timestamp_minute'],this_item['timestamp_second'],this_item['timestamp_frame']))
                         prekog_continue += 1
                 if int(this_item['scenedetect']) < scenechange_threshold:
-                    print('INFO: scenedetect is too low {} must go deeper \t{}:{};{}'.format(int(this_item['scenedetect']), this_item['timestamp_minute'],this_item['timestamp_second'],this_item['timestamp_frame'] ))
+                    print('LOOP: scenedetect is too low {} must go deeper \t{}:{};{}'.format(int(this_item['scenedetect']), this_item['timestamp_minute'],this_item['timestamp_second'],this_item['timestamp_frame'] ))
                     prekog_continue += 1 
+                else:
+                    print('END: scenedetect is high enough {} \t{}:{};{}'.format(int(this_item['scenedetect']), this_item['timestamp_minute'],this_item['timestamp_second'],this_item['timestamp_frame'] ))
+
         prekog_infinteloop += 1
         if prekog_infinteloop > 15: 
-            print('WARNING: infinteloop detected BREAK!')
+            print('END: infinteloop detected BREAK!')
             break
-    pprint(last_hop)
-    print('INFO: prekog_continue completed')
+        else:
+            print('LOOP: infinteloop count: {}'.format(prekog_infinteloop))
+    # pprint(last_hop)
+    print('INFO: prekog_continue completed loop count: {}'.format(loop_count))
     return(last_hop)
     
 def lambda_handler(event, context):
@@ -319,8 +327,9 @@ def lambda_handler(event, context):
         return 'ERROR: DELTA_URL was not set'
     if DELTA_CONTENTNAME == 'not-set':
         return 'ERROR: DELTA_CONTENTNAME was not set'
-    
-    time.sleep(10)
+    print('sleeping...')
+    time.sleep(20)
+    print('sleeping completed')
     # rekog_label = 'Flyer'
     rekog_label = event['rekog_label']
     id_filename = event['id_filename']
@@ -333,12 +342,12 @@ def lambda_handler(event, context):
     else:
         hops_backward = detect_hops(rekog_label, id_filename, False)
     # pprint(hops_backward)
-    print('hops_backward: {} {} {}'.format(hops_backward['timestamp_minute'],hops_backward['timestamp_second'],hops_backward['timestamp_frame'] ))
+    print('hops_backward: {}'.format(hops_backward))
 
     ## FORWARD in time ( may have to wait for time to actually happen )
     hops_forward = detect_hops(rekog_label, id_filename, True)
     # pprint(hops_forward)
-    print('hops_forward: {} {} {}'.format(hops_forward['timestamp_minute'],hops_forward['timestamp_second'],hops_forward['timestamp_frame']))
+    print('hops_forward: {}'.format(hops_forward))
 
     query_dict = {}
     query_dict['label_image'] = id_filename
@@ -350,7 +359,7 @@ def lambda_handler(event, context):
     query_dict['time_end'] = hops_forward['timestamp_minute']+ ':' + hops_forward['timestamp_second']
     query_dict['time_end_frame'] = str(hops_forward['timestamp_frame'])
     query_dict['time_end_image'] = hops_forward['id_filename']
-    pprint(query_dict)
+    # pprint(query_dict)
     contentlist = delta_contents(DELTA_URL)
     # pprint(contentlist)
     for content in contentlist:
