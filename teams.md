@@ -2,6 +2,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## OilMan
 
 ```
@@ -9,6 +15,12 @@
  'DELTA_URL': 'https://delta-1-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/7',
  'HLS_URL': 'http://delta-1-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/5/OilMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -22,6 +34,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## MegaMan
 
 ```
@@ -29,6 +47,12 @@
  'DELTA_URL': 'https://delta-1-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/2',
  'HLS_URL': 'http://delta-1-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/2/MegaMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -42,6 +66,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## CutMan
 
 ```
@@ -49,6 +79,12 @@
  'DELTA_URL': 'https://delta-2-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/6',
  'HLS_URL': 'http://delta-2-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/5/CutMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -62,6 +98,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## GutsMan
 
 ```
@@ -69,6 +111,12 @@
  'DELTA_URL': 'https://delta-2-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/2',
  'HLS_URL': 'http://delta-2-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/3/GutsMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -82,6 +130,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## AirMan
 
 ```
@@ -89,6 +143,12 @@
  'DELTA_URL': 'https://delta-3-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/7',
  'HLS_URL': 'http://delta-3-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/5/AirMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -102,6 +162,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## FireMan
 
 ```
@@ -109,6 +175,12 @@
  'DELTA_URL': 'https://delta-3-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/2',
  'HLS_URL': 'http://delta-3-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/3/FireMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -122,6 +194,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## CrashMan
 
 ```
@@ -129,6 +207,12 @@
  'DELTA_URL': 'https://delta-4-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/8',
  'HLS_URL': 'http://delta-4-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/5/CrashMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -142,6 +226,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## BubbleMan
 
 ```
@@ -149,6 +239,12 @@
  'DELTA_URL': 'https://delta-4-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/4',
  'HLS_URL': 'http://delta-4-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/4/BubbleMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -162,6 +258,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## NeedleMan
 
 ```
@@ -169,6 +271,12 @@
  'DELTA_URL': 'https://delta-5-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/7',
  'HLS_URL': 'http://delta-5-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/5/NeedleMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -182,6 +290,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## MagnetMan
 
 ```
@@ -189,6 +303,12 @@
  'DELTA_URL': 'https://delta-5-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/2',
  'HLS_URL': 'http://delta-5-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/4/MagnetMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -202,6 +322,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## TopMan
 
 ```
@@ -209,6 +335,12 @@
  'DELTA_URL': 'https://delta-6-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/7',
  'HLS_URL': 'http://delta-6-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/5/TopMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -222,6 +354,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## HardMan
 
 ```
@@ -229,6 +367,12 @@
  'DELTA_URL': 'https://delta-6-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/2',
  'HLS_URL': 'http://delta-6-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/2/HardMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -242,6 +386,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## ShadowMan
 
 ```
@@ -249,6 +399,12 @@
  'DELTA_URL': 'https://delta-7-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/7',
  'HLS_URL': 'http://delta-7-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/5/ShadowMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -262,6 +418,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## SparkMan
 
 ```
@@ -269,6 +431,12 @@
  'DELTA_URL': 'https://delta-7-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/2',
  'HLS_URL': 'http://delta-7-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/3/SparkMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -282,6 +450,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## PharaohMan
 
 ```
@@ -289,6 +463,12 @@
  'DELTA_URL': 'https://delta-8-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/6',
  'HLS_URL': 'http://delta-8-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/3/PharaohMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -302,6 +482,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## ToadMan
 
 ```
@@ -309,6 +495,12 @@
  'DELTA_URL': 'https://delta-8-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/3',
  'HLS_URL': 'http://delta-8-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/5/ToadMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -322,6 +514,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## DiveMan
 
 ```
@@ -329,6 +527,12 @@
  'DELTA_URL': 'https://delta-9-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/7',
  'HLS_URL': 'http://delta-9-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/3/DiveMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -342,6 +546,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## SkullMan
 
 ```
@@ -349,6 +559,12 @@
  'DELTA_URL': 'https://delta-9-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/4',
  'HLS_URL': 'http://delta-9-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/4/SkullMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -362,6 +578,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## GravityMan
 
 ```
@@ -369,6 +591,12 @@
  'DELTA_URL': 'https://delta-10-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/6',
  'HLS_URL': 'http://delta-10-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/4/GravityMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -382,6 +610,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## StoneMan
 
 ```
@@ -389,6 +623,12 @@
  'DELTA_URL': 'https://delta-10-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/2',
  'HLS_URL': 'http://delta-10-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/3/StoneMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -402,6 +642,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## ChargeMan
 
 ```
@@ -409,6 +655,12 @@
  'DELTA_URL': 'https://delta-11-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/8',
  'HLS_URL': 'http://delta-11-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/5/ChargeMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -422,6 +674,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## NapalmMan
 
 ```
@@ -429,6 +687,12 @@
  'DELTA_URL': 'https://delta-11-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/2',
  'HLS_URL': 'http://delta-11-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/2/NapalmMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -442,6 +706,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## DarkMan
 
 ```
@@ -449,6 +719,12 @@
  'DELTA_URL': 'https://delta-12-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/7',
  'HLS_URL': 'http://delta-12-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/5/DarkMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -462,6 +738,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## BlizzardMan
 
 ```
@@ -469,6 +751,12 @@
  'DELTA_URL': 'https://delta-12-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/2',
  'HLS_URL': 'http://delta-12-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/3/BlizzardMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -482,6 +770,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## KnightMan
 
 ```
@@ -489,6 +783,12 @@
  'DELTA_URL': 'https://delta-13-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/6',
  'HLS_URL': 'http://delta-13-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/5/KnightMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -502,6 +802,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## WindMan
 
 ```
@@ -509,6 +815,12 @@
  'DELTA_URL': 'https://delta-13-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/2',
  'HLS_URL': 'http://delta-13-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/2/WindMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -522,6 +834,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## JunkMan
 
 ```
@@ -529,6 +847,12 @@
  'DELTA_URL': 'https://delta-14-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/6',
  'HLS_URL': 'http://delta-14-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/3/JunkMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -542,6 +866,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## FreezeMan
 
 ```
@@ -549,6 +879,12 @@
  'DELTA_URL': 'https://delta-14-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/3',
  'HLS_URL': 'http://delta-14-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/5/FreezeMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -562,6 +898,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## CloudMan
 
 ```
@@ -569,6 +911,12 @@
  'DELTA_URL': 'https://delta-15-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/7',
  'HLS_URL': 'http://delta-15-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/5/CloudMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
@@ -582,6 +930,12 @@
 
 ---
 
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
+
+---
+
 ## SpringMan
 
 ```
@@ -589,6 +943,12 @@
  'DELTA_URL': 'https://delta-15-n6anvzyjfdao5.cloud.elementaltechnologies.com/api/contents/2',
  'HLS_URL': 'http://delta-15-n6anvzyjfdao5.cloud.elementaltechnologies.com/out/i/4/SpringMan.m3u8'}
 ```
+
+---
+
+---
+
+Lab Website: `https://github.com/aws-samples/aws-elemental-instant-video-highlights`
 
 ---
 
