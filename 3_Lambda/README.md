@@ -233,7 +233,7 @@ Now that you have a valid Lambda, you need to add a Cloudwatch Event Trigger tha
 
 1. For **Rule type**, make sure that `Schedule expression` is selected.
 
-1. For **Schedule expression**, enter `cron(* 17-23 27 10 *)`
+1. For **Schedule expression**, enter `cron(* 2-4 26 11 ? 2017)`
     **Note:** this crontab expression will only work November 27 between the hours of 10am to 3pm PST
 
 1. Make sure that **Enable trigger** is checked.
@@ -309,8 +309,6 @@ Make sure to configure your function to use the `CatFinderRole` IAM role you cre
     1. For **Key**, enter `DELTA_URL` and then for **Value** enter your team's DELTA_URL from [Team Cheatsheet](../teams.md)
 
     1. For **Key**, enter `DELTA_CONTENTNAME` and then for **Value** enter your team's DELTA_CONTENTNAME from [Team Cheatsheet](../teams.md)
-
-    1. For **Key**, enter `S3_BUCKET` and then in **Value**, enter `catfinder5000-firstname-lastname`
 
 1. Under "Execution role", make sure the following selections are made (this should be filled out already):
 
