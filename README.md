@@ -52,9 +52,9 @@ Module 0: [re:Invent Workshop Start](0_reInventWorkshop/README.md )
 
 Module 1: [S3 Static Web hosting](1_StaticWebHosting/README.md)
 
-Module 2: [DynamoDB and Lambda](2_DynamoDB/README.md)
+Module 2: [DynamoDB](2_DynamoDB/README.md)
 
-Module 3: [Lambda and Delta](3_Lambda/README.md)
+Module 3: [Lambda](3_Lambda/README.md)
 
 Module X: [Extra Credit](X_ExtraCredit/README.md) ( Not required, but you will learn more things! )
 
