@@ -177,7 +177,7 @@ Make sure to configure your function to use the `CatFinderRole` IAM role you cre
 
 1. Under **Basic Settings**, enter the following:
 
-    * For **Memory:**, select **512 MB**
+    * For **Memory:**, select **1024 MB**
 
     * For **Timeout:**, enter `2` min `0` sec
 
@@ -233,8 +233,8 @@ Now that you have a valid Lambda, you need to add a Cloudwatch Event Trigger tha
 
 1. For **Rule type**, make sure that `Schedule expression` is selected.
 
-1. For **Schedule expression**, enter `cron(* 2-4 26 11 ? 2017)`
-    **Note:** this crontab expression will only work November 27 between the hours of 10am to 3pm PST
+1. For **Schedule expression**, enter `cron(* 17-23 27 11 ? 2017)`
+    **Note:** this crontab expression will only work November 27, 2017 between the hours of 9am to 3pm PST
 
 1. Make sure that **Enable trigger** is checked.
 
