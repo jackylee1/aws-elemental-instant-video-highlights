@@ -309,7 +309,7 @@ def parse_manifest(url_full):
                         dynamo_object['rekog_label'] = obj['Name']
                         invoke_lambda(dynamo_object)
 
-                    if int(round(obj['Confidence'])) > 79:
+                    if int(round(obj['Confidence'])) > 49:
                         update_dyanmo_summary(rekog_summary_dynamo)
 
                     if obj['Name'] == 'Person':
@@ -427,4 +427,3 @@ def lambda_handler(event, context):
         w = Thread(name='json', target=write_json)
         w.start()
     return 'SUCCESS: it ran'
-     
