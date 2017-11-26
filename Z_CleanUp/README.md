@@ -1,5 +1,9 @@
 # Cleanup Steps
 
+## Most Important
+
+Please remember to disable the CloudWatch Event for your `catfinder5000-parse`. Though it is configured to only run for the hours of this lab, it would be smart to disable it completely so you don't run up a large AWS bill. 
+
 ## Module 1 - S3 Bucket
 
 1. In the AWS Management Console, choose **Services**, and then select **S3** under Storage.
