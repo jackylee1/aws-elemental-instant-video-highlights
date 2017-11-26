@@ -2,7 +2,7 @@
 
 For this lab, we have pre-configured AWS Elemental Cloud's Live and Delta services for each "team". A team can be 1-3 people who will use a single AWS Account that will use a single AWS Elemental Delta Channel. Each Channel consists of a Live stream unique to that team as well as a Delta Channel. If you try to use a team configuration for multiple people's attempt at this lab, you are going to have a bad time.
 
-Please refer to the [Team Cheat sheet](teams.md) that will be used when assigning Environment Variables in your AWS Lambda Functions within this Lab.
+Please refer to the [Team Cheat sheet](../teams.md) that will be used when assigning Environment Variables in your AWS Lambda Functions within this Lab.
 
 If you are well versed with Serverless Websites infrastructures, you may find yourself ahead of the rest of the class. I would invite you to browse the Python code for each AWS Lambda Function in this repo if you have the extra time.
 
