@@ -139,6 +139,8 @@ Visit your website's base URL (this is the URL you noted in section 4) in the br
 
 If the page renders correctly, you can move on to the next module, [Module 2: DynamoDB](../2_DynamoDB/README.md).
 
+Next: [Module 2: DynamoDB](../2_DynamoDB/README.md)
+
 ## Extra Credit
 
 If you finished this like way too fast... Then we have something extra for you to do that isn't required to make the Lab run, but is neat to learn. Continue on to Module X: [Extra Credit](../X_ExtraCredit/README.md) if you have extra time to spare and only work on the Module section you have completed so far.

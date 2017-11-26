@@ -129,6 +129,8 @@ Use the DynamoDB console to create a new DynamoDB table. Call your table `catfin
 
 After you have successfully created your DynamoDB tables, you can move on to the next module, [Module 3: Lambda](../3_Lambda/README.md) where we add Lambda Funcations for the backend processes.
 
+Next: [Module 3: Lambda](../3_Lambda/README.md)
+
 ## Extra Credit
 
 If you finished this like way too fast... Then we have something extra for you to do that isn't required to make the Lab run, but is neat to learn. Continue on to Module X: [Extra Credit](../X_ExtraCredit/README.md) if you have extra time to spare and only work on the Module section you have completed so far.
