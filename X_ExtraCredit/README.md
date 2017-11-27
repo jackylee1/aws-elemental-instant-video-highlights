@@ -72,7 +72,7 @@ You can override the "Cat" variable in the "parse" Lambda Function with an Envir
 
 1. On the "Configuration" tab, under "Environment variables" enter the following:
 
-    1. For **Key**, enter `HLS_URL` and then in **Value** put any Rekognition Label you want
+    1. For **Key**, enter `REKOG_LABEL` and then in **Value** put any Rekognition Label you want
 
     *Note:* Labels start with a capital letter ex: "Cat", "Adorable"
 
