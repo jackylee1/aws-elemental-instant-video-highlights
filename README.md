@@ -44,11 +44,11 @@ In this lab, you will be creating the "Catfinder-5000"! Which was a name I chose
 
 ## re:Invent Workshop
 
-Start here: Module 0 [re:Invent Workshop Start](0_reInventWorkshop/README.md )
+Start here: Module 0 [Workshop Start](0_AWSElementalLiveDelta/README.md )
 
 ### Module Listing
 
-Module 0: [re:Invent Workshop Start](0_reInventWorkshop/README.md )
+Module 0: [Workshop Start](0_AWSElementalLiveDelta/README.md )
 
 Module 1: [S3 Static Web hosting](1_StaticWebHosting/README.md)
 
