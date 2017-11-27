@@ -163,7 +163,7 @@ Make sure to configure your function to use the `CatFinderRole` IAM role you cre
 
 1. Under **Environment variables**, enter the following:
 
-    1. For **Key**, enter `HLS_URL` and then in **Value**, enter your team's HLS_URL from [Team Cheatsheet](../teams.md)
+    1. For **Key**, enter `HLS_URL` and then in **Value**, enter your HLS master manifest URL
 
         **Note:** Key and Value parameters do not have quotes
 
@@ -306,9 +306,9 @@ Make sure to configure your function to use the `CatFinderRole` IAM role you cre
 
 1. Under **Environment variables**, enter the following:
 
-    1. For **Key**, enter `DELTA_URL` and then for **Value** enter your team's DELTA_URL from [Team Cheatsheet](../teams.md)
+    1. For **Key**, enter `DELTA_URL` and then for **Value** enter your team's AWS Elemental Delta service URL
 
-    1. For **Key**, enter `DELTA_CONTENTNAME` and then for **Value** enter your team's DELTA_CONTENTNAME from [Team Cheatsheet](../teams.md)
+    1. For **Key**, enter `DELTA_CONTENTNAME` and then for **Value** enter your AWS Elemental Delta Channel name
 
 1. Under "Execution role", make sure the following selections are made (this should be filled out already):
 

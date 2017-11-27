@@ -1,12 +1,4 @@
-# re:Invent 2017 Lab
-
-For this lab, we have pre-configured AWS Elemental Cloud's Live and Delta services for each "team". A team can be 1-3 people who will use a single AWS Account that will use a single AWS Elemental Delta Channel. Each Channel consists of a Live stream unique to that team as well as a Delta Channel. If you try to use a team configuration for multiple people's attempt at this lab, you are going to have a bad time.
-
-Please refer to the [Team Cheat sheet](../teams.md) that will be used when assigning Environment Variables in your AWS Lambda Functions within this Lab.
-
-If you are well versed with Serverless Websites infrastructures, you may find yourself ahead of the rest of the class. I would invite you to browse the Python code for each AWS Lambda Function in this repo if you have the extra time.
-
-## Beyond re:Invent 2017 Lab
+# AWS Elemental Cloud
 
 An AWS Elemental Cloud account will be required with a Deployment that consists of a AWS Elemental Live 2.11 and AWS Elemental Delta 2.1.2 Services. Though you could use the Appliance versions, the use of AWS Lambda requires these Appliances would be Public Internet facing. Please refer to Module 0: [AWS Elemental Configuration](../0_AWSElementalLiveDelta/README.md ) for more details.
 

@@ -20,7 +20,7 @@ Since this workflow started out as a tradeshow demo, it was designed to run 24/7
 
     1. For **Enter a rule name** put the root of the HLS filename from the HLS_URL from Module 3
 
-        *Note:* it will be your team's name assigned to you for the [Team Cheatsheet](../teams.md)
+        *Note:* it will be the filename of your HLS manifest. Ex: `http://deltahostname.example.com/u/StreamName.m3u8` you will enter `StreamName`
 
         ![](../images/catfinder5000-s3lifecycle1.png)
 
